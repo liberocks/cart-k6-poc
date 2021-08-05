@@ -1,0 +1,33 @@
+{
+  "name": "cart-k6-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "bundle": "webpack",
+    "start": "./bin/k6 run --out cloud dist/baseline.bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linerocks/cart-k6-poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linerocks/cart-k6-poc/issues"
+  },
+  "homepage": "https://github.com/linerocks/cart-k6-poc#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.16.0",
+    "k6": "0.0.0",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "random-string": "^0.2.0"
+  }
+}

@@ -1,0 +1,5 @@
+bin
+pkg
+*.db*
+node_modules
+dist
