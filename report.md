@@ -40,9 +40,15 @@ Load type : **soak testing**
   - Multi row insert (store each item in separate row)
 
 - Item count (this defines how much item inserted upon every transaction performed)
+
   - 20 (approximately worth ±15.38 KB data)
   - 200 (approximately worth ±153.8 KB data)
   - 2000 (approximately worth ±1538 KB data)
+
+  ### Metric
+
+  - Average iteration duration : how much time an insert operation takes time
+  - Transaction per second : how many transaction achieved for every second
 
 ## Result
 
