@@ -5,7 +5,13 @@
   "main": "",
   "scripts": {
     "bundle": "webpack",
-    "start": "./bin/k6 run --out cloud dist/baseline.bundle.js"
+    "mysql-single-row20": "ITEM_COUNT=20 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 5m --vus 5 --tag name=mysql-single-row20",
+    "mysql-single-row200": "ITEM_COUNT=200 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 5m --vus 5 --tag name=mysql-single-row200",
+    "mysql-single-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 5m --vus 5 --tag name=mysql-single-row2000",
+    "mysql-multi-row20": "ITEM_COUNT=20 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 5m --vus 5 --tag name=mysql-multi-row20",
+    "mysql-multi-row200": "ITEM_COUNT=200 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 5m --vus 5 --tag name=mysql-multi-row200",
+    "mysql-multi-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 5m --vus 5 --tag name=mysql-multi-row2000",
+    "start": "npm run bundle && npm run mysql-single-row20 && npm run mysql-single-row200 && npm run mysql-single-row200 && npm run mysql-multi-row20 && npm run mysql-multi-row200 && npm run mysql-multi-row2000"
   },
   "repository": {
     "type": "git",

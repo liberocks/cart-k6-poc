@@ -3,12 +3,12 @@ const path = require("path");
 module.exports = {
   mode: "production",
   entry: {
-    baseline: "./script/1-baseline.js",
-    "mysql-single-row": "./script/2-mysql-single-row.js",
-    "mongo-big-row": "./script/3-mongo-big-row.js",
-    "mongo-single-row": "./script/4-mongo-single-row.js",
-    "redis-big-row": "./script/5-redis-big-row.js",
-    "redis-single-row": "./script/6-redis-single-row.js",
+    "mysql-single-row": "./script/1-mysql-single-row.js",
+    "mysql-multi-row": "./script/2-mysql-multi-row.js",
+    "mongo-single-row": "./script/3-mongo-single-row.js",
+    "mongo-multi-row": "./script/4-mongo-multi-row.js",
+    "redis-single-row": "./script/5-redis-single-row.js",
+    "redis-multi-row": "./script/6-redis-multi-row.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),

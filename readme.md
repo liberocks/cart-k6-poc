@@ -1,3 +1,5 @@
+# Single Row vs Mutli Row Cart Insert Benchmark
+
 ## Setup
 
 - Install golang
@@ -28,14 +30,8 @@ CGO_ENABLED=1 ./bin/xk6 build master \
 ./bin/k6 login cloud
 ```
 
-- Bundle the script
+## Running benchmark
 
 ```
-npm run bundle
-```
-
-## Running load testing
-
-```
-npm run start
+ MYSQL_CONNECTION_STRING="<MYSQL_CONNECTION_STRING>" npm run start
 ```
