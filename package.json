@@ -5,13 +5,19 @@
   "main": "",
   "scripts": {
     "bundle": "webpack",
-    "mysql-single-row20": "ITEM_COUNT=20 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 60s --vus 5 --tag name=mysql-single-row20",
-    "mysql-single-row200": "ITEM_COUNT=200 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 60s --vus 5 --tag name=mysql-single-row200",
-    "mysql-single-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 60s --vus 5 --tag name=mysql-single-row2000",
-    "mysql-multi-row20": "ITEM_COUNT=20 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 60s --vus 5 --tag name=mysql-multi-row20",
-    "mysql-multi-row200": "ITEM_COUNT=200 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 60s --vus 5 --tag name=mysql-multi-row200",
-    "mysql-multi-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 60s --vus 5 --tag name=mysql-multi-row2000",
-    "start": "npm run bundle && npm run mysql-single-row20 && npm run mysql-single-row200 && npm run mysql-single-row2000 && npm run mysql-multi-row20 && npm run mysql-multi-row200 && npm run mysql-multi-row2000"
+    "mysql-single-row20": "ITEM_COUNT=20 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 120s --vus 5 --tag name=mysql-single-row20",
+    "mysql-single-row200": "ITEM_COUNT=200 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 120s --vus 5 --tag name=mysql-single-row200",
+    "mysql-single-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/mysql-single-row.bundle.js --duration 120s --vus 5 --tag name=mysql-single-row2000",
+    "mysql-multi-row20": "ITEM_COUNT=20 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 120s --vus 5 --tag name=mysql-multi-row20",
+    "mysql-multi-row200": "ITEM_COUNT=200 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 120s --vus 5 --tag name=mysql-multi-row200",
+    "mysql-multi-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/mysql-multi-row.bundle.js --duration 120s --vus 5 --tag name=mysql-multi-row2000",
+    "redis-single-row20": "ITEM_COUNT=20 ./bin/k6 run dist/redis-single-row.bundle.js --duration 120s --vus 5 --tag name=redis-single-row20",
+    "redis-single-row200": "ITEM_COUNT=200 ./bin/k6 run dist/redis-single-row.bundle.js --duration 120s --vus 5 --tag name=redis-single-row200",
+    "redis-single-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/redis-single-row.bundle.js --duration 120s --vus 5 --tag name=redis-single-row2000",
+    "redis-multi-row20": "ITEM_COUNT=20 ./bin/k6 run dist/redis-multi-row.bundle.js --duration 120s --vus 5 --tag name=redis-multi-row20",
+    "redis-multi-row200": "ITEM_COUNT=200 ./bin/k6 run dist/redis-multi-row.bundle.js --duration 120s --vus 5 --tag name=redis-multi-row200",
+    "redis-multi-row2000": "ITEM_COUNT=2000 ./bin/k6 run dist/redis-multi-row.bundle.js --duration 120s --vus 5 --tag name=redis-multi-row2000",
+    "start": "npm run bundle && npm run mysql-single-row20 && npm run mysql-single-row200 && npm run mysql-single-row2000 && npm run mysql-multi-row20 && npm run mysql-multi-row200 && npm run mysql-multi-row2000 && npm run redis-single-row20 && npm run redis-single-row200 && npm run redis-single-row2000 && npm run redis-multi-row20 && npm run redis-multi-row200 && npm run redis-multi-row2000"
   },
   "repository": {
     "type": "git",
@@ -32,8 +38,5 @@
     "k6": "0.0.0",
     "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2"
-  },
-  "dependencies": {
-    "random-string": "^0.2.0"
   }
 }

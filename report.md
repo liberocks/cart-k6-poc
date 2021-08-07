@@ -4,7 +4,7 @@
 
 ### Scenario
 
-Benchmark duration : **60 seconds**
+Benchmark duration : **120 seconds**
 
 Concurrent virtual user : **5 vus**
 
@@ -32,7 +32,7 @@ Load type : **soak testing**
 
   - Mysql
   - MongoDB (TODO)
-  - Redis (TODO)
+  - Redis
 
 - Method
 
@@ -56,14 +56,14 @@ Load type : **soak testing**
 
 | Item count | Mysql Single Row | Mysql Multi Row | MongoDB Single Row | MongoDB Multi Row | Redis Single Row | Redis Multi Row |
 | ---------- | ---------------- | --------------- | ------------------ | ----------------- | ---------------- | --------------- |
-| 20         | 3.65ms           | 4.59ms          | n/a                | n/a               | n/a              | n/a             |
-| 200        | 20.97ms          | 29.89ms         | n/a                | n/a               | n/a              | n/a             |
-| 2000       | 180.49ms         | 273.37ms        | n/a                | n/a               | n/a              | n/a             |
+| 20         | 2.23ms           | 4.59ms          | n/a                | n/a               | 0.3213ms         | 9.95ms          |
+| 200        | 11.77ms          | 29.44ms         | n/a                | n/a               | 0.64906ms        | 100.32ms        |
+| 2000       | 151.34ms         | 277.16ms        | n/a                | n/a               | 3.87ms           | 869.39ms        |
 
 ### Transaction per second
 
 | Item count | Mysql Single Row | Mysql Multi Row | MongoDB Single Row | MongoDB Multi Row | Redis Single Row | Redis Multi Row |
 | ---------- | ---------------- | --------------- | ------------------ | ----------------- | ---------------- | --------------- |
-| 20         | 1317.129006/s    | 960.701382/s    | n/a                | n/a               | n/a              | n/a             |
-| 200        | 230.998883/s     | 142.352077/s    | n/a                | n/a               | n/a              | n/a             |
-| 2000       | 26.622743/s      | 15.036897/s     | n/a                | n/a               | n/a              | n/a             |
+| 20         | 2168.25386/s     | 956.335349/s    | n/a                | n/a               | 14809.677281/s   | 500.476699/s    |
+| 200        | 409.467149/s     | 143.241219/s    | n/a                | n/a               | 7476.923183/s    | 49.776977/s     |
+| 2000       | 31.718439/s      | 14.819381/s     | n/a                | n/a               | 1274.600789/s    | 5.730391/s      |

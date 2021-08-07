@@ -22,5 +22,7 @@ module.exports = {
   externals: {
     k6: "k6",
     "k6/x/sql": "k6/x/sql",
+    "k6/x/redis": "k6/x/redis",
+    "k6/metrics": "k6/metrics",
   },
 };
